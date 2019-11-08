@@ -4,19 +4,23 @@ PODS:
   - SDWebImage/Core (5.2.3)
   - SDWebImageSwiftUI (0.7.0):
     - SDWebImage (~> 5.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - SDWebImageSwiftUI
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
     - SDWebImage
     - SDWebImageSwiftUI
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SDWebImageSwiftUI: 45e23f8884a6bc7af436e9bb8ea8eb1e47e27edd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 48a1bc42782a35d0d2f7531ba0be77a04bacce38
+PODFILE CHECKSUM: cbe3f099097d98f3ca5999c17d7770313df5d71c
 
 COCOAPODS: 1.8.4

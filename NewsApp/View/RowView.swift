@@ -16,7 +16,7 @@ struct RowView: View {
     
     var body: some View {
         VStack{
-            Text(article.title).font(.title).padding(.bottom)
+            Text(article.title).font(.title).padding(.bottom, -20).lineLimit(nil)
             WebImage(url: URL(string: article.urlToImage ?? ""))
             .onSuccess { image, cacheType in
                 // Success
@@ -30,13 +30,13 @@ struct RowView: View {
             .clipped()
             Text("\(article.description ?? "")")
                 .font(.body)
-                .padding(.bottom)
-                .padding(.top)
+                .lineLimit(nil)
             HStack{
-                Text("Source: \(article.source?.name ?? "")").font(.footnote)
+                Text("Source: \(article.source?.name ?? "")").font(.footnote).foregroundColor(.gray)
                 Spacer()
-                Text("Published: \(self.parseTime(date: article.publishedAt!) ?? "")").font(.caption)
+                Text("Published: \(self.parseTime(date: article.publishedAt!) ?? "")").font(.caption).foregroundColor(.gray)
             }.padding(.top)
+                
         }
     }
     

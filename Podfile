@@ -6,6 +6,7 @@ target 'NewsApp' do
   use_frameworks!
 
 	pod 'SDWebImageSwiftUI'
+	pod 'SVProgressHUD'
 
   # Pods for NewsApp
 
