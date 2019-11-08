@@ -12,13 +12,18 @@ struct ContentView: View {
     
     @ObservedObject var newsVM = NewsViewModel()
 
+    init(){
+       UITableView.appearance().separatorStyle = .none
+    }
     
     var body: some View {
         NavigationView{
             List(newsVM.articles, id: \.title){ art in
-                RowView(article: art)
+                NavigationLink(destination: DetailsView(articles: art)){
+                                RowView(article: art)
+                }
                 }.navigationBarTitle("News")
-                .navigationBarItems(trailing: Button(action: {self.newsVM.fetchNews();print(self.newsVM.articles)}, label: {Text("Refesh")}))
+                .navigationBarItems(trailing: Button(action: {self.newsVM.fetchNews()}, label: {Text("Refesh")}))
         }
     }
 }

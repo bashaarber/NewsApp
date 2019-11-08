@@ -31,7 +31,6 @@ class NewsViewModel: ObservableObject{
                 DispatchQueue.main.async {
                     do{
                         self.news = try JSONDecoder().decode(News.self, from: data)
-                        print("Arber \(self.news)")
                         self.articles = self.news!.articles
                     }catch let err{
                         print("Error :\(err)")
