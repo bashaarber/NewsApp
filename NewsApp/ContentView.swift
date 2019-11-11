@@ -21,7 +21,7 @@ struct ContentView: View {
             VStack(alignment: . leading){
                 
                 
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal, showsIndicators: false){
                         VStack (alignment: .leading){
                             HStack{
                                 Button(action: {self.newsVM.fetchCategoryNews(category: "sports")}, label: {Text("Sport")})
@@ -52,7 +52,9 @@ struct ContentView: View {
                             }
                         }
                         .frame(height: 200)
-                        .padding()
+                        .padding(.top,-30)
+                        .padding(.leading,5)
+                        .padding(.trailing,5)
                      }
                 
                 List(newsVM.articles, id: \.title){ art in
